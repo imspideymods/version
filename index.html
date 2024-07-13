@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Software Version</title>
+</head>
+<body>
+    <h1>Software Version</h1>
+    <p>
+        The current version of the software is:
+        <span id="version"></span>
+    </p>
+
+    <script>
+        fetch('version.txt')
+            .then(response => response.text())
+            .then(version => {
+                document.getElementById('version').innerText = version;
+            });
+    </script>
+</body>
+</html>
